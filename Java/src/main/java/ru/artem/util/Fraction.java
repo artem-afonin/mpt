@@ -91,13 +91,6 @@ public class Fraction implements Cloneable, Comparable<Fraction> {
     }
 
     @Override
-    public int hashCode() {
-        int result = numerator;
-        result = 31 * result + denominator;
-        return result;
-    }
-
-    @Override
     public String toString() {
         return numerator + "/" + denominator;
     }
