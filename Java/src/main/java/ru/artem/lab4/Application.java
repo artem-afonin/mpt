@@ -19,7 +19,7 @@ public class Application {
         System.out.println("-(" + secondFraction + ") = " + secondFraction.negate());
         System.out.println(firstFraction + " == " + secondFraction + " := " + firstFraction.equals(secondFraction));
         System.out.println(firstFraction + " == " + new Fraction("1/2") + " := " + firstFraction.equals(new Fraction("1/2")));
-        System.out.println(firstFraction + " > " + secondFraction + " := " + firstFraction.greaterThan(secondFraction));
-        System.out.println(secondFraction + " > " + firstFraction + " := " + firstFraction.greaterThan(secondFraction));
+        System.out.println(firstFraction + " > " + secondFraction + " := " + (firstFraction.compareTo(secondFraction) > 0));
+        System.out.println(secondFraction + " > " + firstFraction + " := " + (firstFraction.compareTo(secondFraction) > 0));
     }
 }
