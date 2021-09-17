@@ -1,6 +1,6 @@
 package ru.artem.util;
 
-public class Fraction implements Cloneable {
+public class Fraction implements Cloneable, Comparable<Fraction> {
 
     protected int numerator;
     protected int denominator;
@@ -64,8 +64,20 @@ public class Fraction implements Cloneable {
         return new Fraction(-numerator, denominator);
     }
 
+    @Deprecated()
     public boolean greaterThan(Fraction other) {
         return subtract(other).numerator > 0;
+    }
+
+    @Override
+    public int compareTo(Fraction other) {
+        int numerator = subtract(other).numerator;
+        if (numerator > 0) {
+            return 1;
+        } else if (numerator < 0) {
+            return -1;
+        }
+        return 0;
     }
 
     @Override
