@@ -51,9 +51,7 @@ public class Fraction implements Cloneable, Comparable<Fraction> {
     }
 
     public Fraction square() {
-        int newNumerator = numerator * numerator;
-        int newDenominator = denominator * denominator;
-        return new Fraction(newNumerator, newDenominator);
+        return multiply(this);
     }
 
     public Fraction inversed() {

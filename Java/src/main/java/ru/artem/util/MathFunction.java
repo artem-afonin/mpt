@@ -9,5 +9,9 @@ public final class MathFunction {
         if (b == 0) return a;
         return gcd(b, a % b);
     }
-    
+
+    public static boolean doubleEqualsWithDelta(double first, double second, double delta) {
+        return Math.abs(first - second) < delta;
+    }
+
 }
