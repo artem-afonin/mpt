@@ -1,6 +1,7 @@
-package ru.artem.util;
+package ru.artem.entity;
 
 import org.junit.jupiter.api.Test;
+import ru.artem.entity.Complex;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

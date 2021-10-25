@@ -1,8 +1,8 @@
-package ru.artem.util;
+package ru.artem.entity;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.artem.entity.Fraction;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -46,8 +46,8 @@ public class FractionTest {
         assertEquals(new Fraction("24/48"), first);
         assertEquals(new Fraction("-3/4"), second);
 
-        Assertions.assertNotEquals(new Fraction("1/3"), first);
-        Assertions.assertNotEquals(new Fraction("3/4"), second);
+        assertNotEquals(new Fraction("1/3"), first);
+        assertNotEquals(new Fraction("3/4"), second);
     }
 
     @Test

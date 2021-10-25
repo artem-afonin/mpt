@@ -1,4 +1,6 @@
-package ru.artem.util;
+package ru.artem.entity;
+
+import ru.artem.util.MathFunction;
 
 public class Fraction implements Cloneable, Comparable<Fraction> {
 

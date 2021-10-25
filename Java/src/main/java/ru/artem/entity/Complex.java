@@ -1,4 +1,4 @@
-package ru.artem.util;
+package ru.artem.entity;
 
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -12,7 +12,7 @@ public class Complex implements Cloneable {
     // a + bi
     // 3 - i
     // -3 + 2i
-    private static final Pattern complexRegex = Pattern.compile("\\s*(-?\\d+(\\.\\d+)?)\\s*([-+])\\s*((\\d+(\\.\\d+)?)?i)\\s*");
+    private static final Pattern COMPLEX_REGEX = Pattern.compile("\\s*(-?\\d+(\\.\\d+)?)\\s*([-+])\\s*((\\d+(\\.\\d+)?)?i)\\s*");
 
     protected double real;
     protected double imaginary;
@@ -22,7 +22,7 @@ public class Complex implements Cloneable {
     }
 
     public Complex(String complexString) {
-        Matcher complexMatcher = complexRegex.matcher(complexString);
+        Matcher complexMatcher = COMPLEX_REGEX.matcher(complexString);
         if (!complexMatcher.matches()) {
             throw new IllegalArgumentException("Complex string does not match pattern");
         }
