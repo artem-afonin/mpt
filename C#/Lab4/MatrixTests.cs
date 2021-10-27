@@ -152,17 +152,4 @@ namespace Lab4
             Assert.AreEqual(expected, firstMatrix.ToString());
         }
     }
-
-    internal class MatricesComparer : IEqualityComparer<Matrix>
-    {
-        public bool Equals(Matrix? self, Matrix? other)
-        {
-            return self == other;
-        }
-
-        public int GetHashCode(Matrix obj)
-        {
-            throw new NotImplementedException();
-        }
-    }
 }
