@@ -111,6 +111,14 @@ public class ScaledNumber implements Cloneable {
         return this.accuracy == accuracy;
     }
 
+    public double getNumber() {
+        return number;
+    }
+
+    public int getBase() {
+        return base;
+    }
+
     public int getAccuracy() {
         return accuracy;
     }
@@ -120,10 +128,10 @@ public class ScaledNumber implements Cloneable {
         cachedStringValue = null;
     }
 
-    private static class Converter {
+    public static class Converter {
 
-        private static final String NUMBER_CHARACTERS = "0123456789ABCDEF";
-        private final Pattern SCALED_NUMBER_REGEX = Pattern.compile("\\s*([0-9A-F]+)(\\.([0-9A-F]+))?\\s*");
+        public static final String NUMBER_CHARACTERS = "0123456789ABCDEF";
+        public final Pattern SCALED_NUMBER_REGEX = Pattern.compile("\\s*-?\\s*([0-9A-F]+)(\\.([0-9A-F]+))?\\s*");
 
         public double fromString(String str, int base, int accuracy) {
             Matcher scaledNumberMatcher = SCALED_NUMBER_REGEX.matcher(str.toUpperCase());
@@ -165,6 +173,10 @@ public class ScaledNumber implements Cloneable {
                 for (int i = 0; i < fractionPartArray.length; i++) {
                     result += fractionPartArray[i] * Math.pow(base, -i - 1);
                 }
+            }
+
+            if (str.strip().charAt(0) == '-') {
+                result *= -1;
             }
 
             return result;
