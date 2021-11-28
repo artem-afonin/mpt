@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 import static ru.artem.util.MathFunction.doubleEqualsWithDelta;
 
-public class Complex implements Cloneable {
+public class Complex implements Number<Complex> {
 
     public static final double DELTA = 1e-3;
     // a + bi
@@ -16,6 +16,10 @@ public class Complex implements Cloneable {
 
     protected double real;
     protected double imaginary;
+
+    public Complex() {
+        this(0, 0);
+    }
 
     public Complex(double real, double imaginary) {
         initComplexNumbers(real, imaginary);

@@ -159,7 +159,6 @@ public class LinkedArraySetTest {
         set2.put(5);
         set2.put(6);
 
-        set1.multiply(set2).forEach(System.out::println);
         assertIterableEquals(Arrays.asList(3, 4), set1.multiply(set2));
     }
 

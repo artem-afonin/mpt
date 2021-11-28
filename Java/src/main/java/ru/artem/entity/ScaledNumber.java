@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ScaledNumber implements Cloneable {
+public class ScaledNumber implements Number<ScaledNumber> {
 
     public static final double MAX_DELTA = 6;
     public static final double DELTA = 1e-6;

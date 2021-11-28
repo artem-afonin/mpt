@@ -2,10 +2,14 @@ package ru.artem.entity;
 
 import ru.artem.util.MathFunction;
 
-public class Fraction implements Cloneable, Comparable<Fraction> {
+public class Fraction implements Number<Fraction>, Comparable<Fraction> {
 
     protected int numerator;
     protected int denominator;
+
+    public Fraction() {
+        this(0, 1);
+    }
 
     public Fraction(int numerator, int denominator) {
         initFractionNumbers(numerator, denominator);
