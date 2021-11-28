@@ -1,7 +1,7 @@
 package ru.artem.editor;
 
 import org.apache.commons.math3.util.Precision;
-import ru.artem.entity.ScaledNumber;
+import ru.artem.entity.number.ScaledNumber;
 
 public class ScaledNumberEditor {
 

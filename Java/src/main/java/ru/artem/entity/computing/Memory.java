@@ -1,4 +1,6 @@
-package ru.artem.entity;
+package ru.artem.entity.computing;
+
+import ru.artem.entity.number.Number;
 
 import java.util.function.Supplier;
 

@@ -1,4 +1,4 @@
-package ru.artem.entity;
+package ru.artem.entity.number;
 
 public interface Number<T> extends Cloneable {
     T add(T other);

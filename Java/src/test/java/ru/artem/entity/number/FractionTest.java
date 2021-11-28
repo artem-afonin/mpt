@@ -1,8 +1,7 @@
-package ru.artem.entity;
+package ru.artem.entity.number;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.artem.entity.Fraction;
 
 import static org.junit.jupiter.api.Assertions.*;
 

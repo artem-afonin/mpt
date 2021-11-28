@@ -1,4 +1,4 @@
-package ru.artem.entity;
+package ru.artem.entity.number;
 
 import ru.artem.util.MathFunction;
 

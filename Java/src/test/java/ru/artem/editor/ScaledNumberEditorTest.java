@@ -1,7 +1,7 @@
 package ru.artem.editor;
 
 import org.junit.jupiter.api.Test;
-import ru.artem.entity.ScaledNumber;
+import ru.artem.entity.number.ScaledNumber;
 
 import java.lang.reflect.Field;
 

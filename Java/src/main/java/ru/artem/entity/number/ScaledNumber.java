@@ -1,4 +1,4 @@
-package ru.artem.entity;
+package ru.artem.entity.number;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.math3.util.Precision;
