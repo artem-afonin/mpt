@@ -12,6 +12,7 @@
 
     <modules>
         <module>mpt-core</module>
+        <module>converter</module>
     </modules>
 
     <build>
