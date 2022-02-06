@@ -46,8 +46,7 @@ public class Monomial {
     public int evaluate(int x) {
         if (exp == 0)
             return base;
-        else if (exp == 1)
-            return base * x;
+        else if (exp == 1)            return base * x;
         else
             return base * (int) Math.pow(x, exp);
     }
